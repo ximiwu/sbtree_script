@@ -1,0 +1,37 @@
+{
+    "app_name": "智障树托管",
+    "version" : "v1.0.0",
+    "copyright" : "By: 西米屋花火",
+    "year" : 2024,
+    "theme_name" : "default",
+    "custom_title_bar": true,
+    "fixed_size": true,
+    "startup_size": [
+        450,450
+    ],
+    "minimum_size": [
+        450,400
+    ],
+    "maximum_size": [
+        400,400
+    ],
+    "lef_menu_size" : {
+        "minimum" : 50,
+        "maximum" : 240
+    },
+    "left_menu_content_margins" : 3,
+    "left_column_size" : {
+        "minimum" : 0,
+        "maximum" : 240
+    },
+    "right_column_size" : {
+        "minimum" : 0,
+        "maximum" : 240
+    },
+    "time_animation" : 500,
+    "font" : {
+        "family" : "Segoe UI",
+        "title_size" : 10,
+        "text_size" : 9
+    }
+}
