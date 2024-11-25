@@ -24,16 +24,20 @@ def work(browser):
                 if video.child(3).attr('class') == 'fl time_icofinish':
                     continue
                 video.click()
-                sleep(2)
+                while True:
+                    try:
+                        sbtree.ele('@class=speedBox').click()
+                        sleep(0.01)
+                    except Exception as e:
+                        break
                 while True:
                     try:
                         sbtree.ele('@class=speedBox').click()
                         break
                     except Exception as e:
-                        sleep(0.1)
-                sbtree.ele('@class=speedBox').click()
+                        sleep(0.01)
+                sbtree.ele('@class=speedBox').hover()
                 sbtree.ele('@class=speedTab speedTab15').click()
-                sleep(1)
                 sbtree.ele('@class=videoArea').click()
                 while (video.child(3).attr('class') != 'fl time_icofinish'):
                     if sbtree.ele('@aria-label=弹题测验'):
