@@ -31,8 +31,9 @@ def work(browser):
                         break
                     except Exception as e:
                         sleep(0.1)
-
+                sbtree.ele('@class=speedBox').click()
                 sbtree.ele('@class=speedTab speedTab15').click()
+                sleep(1)
                 sbtree.ele('@class=videoArea').click()
                 while (video.child(3).attr('class') != 'fl time_icofinish'):
                     if sbtree.ele('@aria-label=弹题测验'):
