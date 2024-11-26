@@ -17,8 +17,27 @@
 # IMPORT PACKAGES AND MODULES
 # ///////////////////////////////////////////////////////////////
 #from gui.uis.windows.main_window.functions_main_window import *
+
+
+
+
 import sys
 import os
+python_path = os.path.abspath(__file__)
+python_path = os.path.dirname(python_path)
+python_path = os.path.dirname(python_path)
+python_path = os.path.join(python_path, 'python')
+
+
+os.environ['QT_OPENGL'] = 'software'
+
+os.environ['QTDIR'] = os.path.join(python_path, 'Library', 'lib', 'qt6')
+print(os.environ['QTDIR'])
+os.environ['QT_PLUGIN_PATH'] = os.path.join(os.environ['QTDIR'], 'plugins')
+print(os.environ['QT_PLUGIN_PATH'])
+os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = os.path.join(os.environ['QT_PLUGIN_PATH'], 'platforms')
+print(os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'])
+
 
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
